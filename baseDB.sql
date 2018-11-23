@@ -134,6 +134,37 @@ LOCK TABLES `tb_game` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tb_game_image`
+--
+
+DROP TABLE IF EXISTS `tb_game_image`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `tb_game_image` (
+  `idImage` int(11) NOT NULL,
+  `gameCoverURL` varchar(45) DEFAULT NULL,
+  `screenshot1` varchar(45) DEFAULT NULL,
+  `screenshot2` varchar(45) DEFAULT NULL,
+  `screenshot3` varchar(45) DEFAULT NULL,
+  `screenshot4` varchar(45) DEFAULT NULL,
+  `screenshot5` varchar(45) DEFAULT NULL,
+  `idGame` int(11) NOT NULL,
+  PRIMARY KEY (`idImage`),
+  KEY `FK_ID_GAME_idx` (`idGame`),
+  CONSTRAINT `FK_ID_GAME` FOREIGN KEY (`idGame`) REFERENCES `tb_game` (`idGame`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_game_image`
+--
+
+LOCK TABLES `tb_game_image` WRITE;
+/*!40000 ALTER TABLE `tb_game_image` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_game_image` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tb_original_host`
 --
 
@@ -189,4 +220,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-23 18:12:12
+-- Dump completed on 2018-11-23 19:04:12
