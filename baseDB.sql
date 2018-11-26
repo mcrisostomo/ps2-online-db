@@ -165,6 +165,33 @@ LOCK TABLES `tb_game_image` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tb_game_review`
+--
+
+DROP TABLE IF EXISTS `tb_game_review`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `tb_game_review` (
+  `idReview` int(11) NOT NULL,
+  `reviewEN` longtext,
+  `reviewPT` longtext,
+  `reviewES` longtext,
+  `idGame` int(11) NOT NULL,
+  PRIMARY KEY (`idReview`),
+  KEY `idGame_idx` (`idGame`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_game_review`
+--
+
+LOCK TABLES `tb_game_review` WRITE;
+/*!40000 ALTER TABLE `tb_game_review` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_game_review` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tb_original_host`
 --
 
@@ -220,4 +247,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-23 19:04:12
+-- Dump completed on 2018-11-26 16:33:16
