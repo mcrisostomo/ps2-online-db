@@ -178,7 +178,8 @@ CREATE TABLE `tb_game_review` (
   `reviewES` longtext,
   `idGame` int(11) NOT NULL,
   PRIMARY KEY (`idReview`),
-  KEY `idGame_idx` (`idGame`)
+  KEY `idGame_idx` (`idGame`),
+  CONSTRAINT `FK_ID_GAME_REVIEW` FOREIGN KEY (`idGame`) REFERENCES `tb_game` (`idGame`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -247,4 +248,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-26 16:33:16
+-- Dump completed on 2018-11-27 14:50:29
