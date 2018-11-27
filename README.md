@@ -19,6 +19,4 @@ https://github.com/mcrisostomo/ps2-online-site
 ```
 
 - Database Schema
-```
 ![alt text](ps2-online-dbModelSchema.png)
-```
