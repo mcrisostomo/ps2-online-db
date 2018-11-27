@@ -18,5 +18,7 @@ https://github.com/mcrisostomo/ps2-online-app
 https://github.com/mcrisostomo/ps2-online-site
 ```
 
-Database Schema
+- Database Schema
+```
 ![alt text](ps2-online-dbModelSchema.png)
+```
